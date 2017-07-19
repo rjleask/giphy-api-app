@@ -1,0 +1,58 @@
+img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 275px;
+    height: 200px;
+}
+
+button {
+    padding: 1%;
+    background: #ff0016;
+    border: none;
+    margin: 5px 5px;
+    box-shadow: 1px 1px 5px #000000;
+    color: white;
+    font-weight: bold;
+}
+
+body {
+    height: 100vh;
+    background-image: url("http://celebrationentertainment.com/wp-content/uploads/2015/09/superhero-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+label {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+img {
+    border: 3px solid red;
+}
+
+header {
+    color: white;
+    font-size: 20px;
+}
+
+form {
+    margin-top: 2%;
+}
+
+#sport-input {
+    height: 25px;
+}
+
+.img-boxes {
+    width: 275px;
+    height: 200px;
+    padding: 2%;
+    float: left;
+}
+
+.img-boxes span {
+    font-weight: bold;
+    color: white;
+}
