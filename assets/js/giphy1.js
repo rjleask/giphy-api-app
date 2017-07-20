@@ -10,7 +10,7 @@ var App = function() {
     $("body").on("click", ".activity-buttons", function() {
         $(".row").empty();
         var getButtonValue = $(this).text();
-        var buttonRequest = $.get("http://api.giphy.com/v1/gifs/search?q=" + getButtonValue + "&api_key=0ced3e3233864d878eada98f0280b266&limit=10");
+        var buttonRequest = $.get("https://api.giphy.com/v1/gifs/search?q=" + getButtonValue + "&api_key=0ced3e3233864d878eada98f0280b266&limit=10");
         buttonRequest.done(function(response) {
             // loop through response.data array of objects and append nested span and img inside divs pulling
             // out the rating and still image url so its static on load
@@ -18,7 +18,6 @@ var App = function() {
             for (var i = 0; i < response.data.length; i++) {
                 $(".row").prepend("<div class='img-boxes' data-srca=" + response.data[i].images.downsized.url + " " + "data-srcs =" + response.data[i].images.downsized_still.url + ">" + "<span> Rating: " + response.data[i].rating + "</span>" + "<img src=" + response.data[i].images.downsized_still.url + ">" + "</div > ");
             }
-            console.log(response.data[5], $(".img-boxes").data("src"));
         });
     });
     $("body").on("click", "img", function() {
